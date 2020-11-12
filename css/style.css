@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open sans";
+}
+
+html,body{height: 100%;}
+
+
+/* 
+Classes Auxiliares
+
+*/
+
+.center {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 2%;
+}
+
+.clear{clear: both;}
+
+/***/
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+section.main {
+    position: relative;
+    background-image: url('../images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 15px 0;
+    min-height: 800px;
+}
+
+section.main header {
+    z-index: 3;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.icons-social {
+    float: right;
+}
+
+.icons-social a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 15px;
+}
+
+.logo {
+    margin-top: 20px;
+    float: left;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+}
+
+nav.mobile {
+    display: none;
+    float: right;
+
+}
+
+nav.mobile ul {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 95px;
+    list-style-type: none;
+    background: white;
+    width: 100%;
+}
+
+nav.mobile li {
+    font-weight: lighter;
+    border-bottom: 4px solid #444;
+    text-align: center;
+    padding: 8px 0;
+}
+
+nav.mobile ul li a {
+    text-decoration: none;
+    color: #444;
+}
+
+nav.mobile > i {
+    position: relative;
+    top: 23px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+nav.desktop {
+    margin-top: 20px;
+    float: right;
+    margin-right: 10px;
+}
+
+nav.desktop ul {
+    list-style-type: none;
+}
+
+nav.desktop ul li {
+    display: inline-block;
+    font-size: 17px;
+    margin: 0 15px;
+    font-weight: lighter;
+}
+
+nav.desktop ul li a {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+}
+
+.conteudo-header {
+    color: white;
+    max-width: 700px;
+    margin: 110px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.conteudo-header h2 {
+    font-weight: lighter;
+    font-size: 44px;
+}
+
+.conteudo-header h2 > span {
+    color: #2692FF;
+}
+
+.conteudo-header p {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.conteudo-header a {
+    display: block;
+    width: 177px;
+    height: 44px;
+    background: #2692FF;
+    text-align: center;
+    line-height: 44px;
+    text-decoration: none;
+    margin-top: 18px;
+    border-radius: 20px;
+    color: white;
+}
+
+.chamada-planos {
+    width: 100%;
+    text-align: center;
+    padding: 27px 2%;
+    background: rgb(220,220,220);
+}
+
+.chamada-planos h2 {
+    display: inline-block;
+    border-top: 2px solid #2692FF;
+    color: #2692FF;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.box-planos{
+    padding: 40px 0;
+}
+
+.box-planos > .center {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.box-planos-single {
+    width: 33.3%;
+    padding: 0 40px;
+}
+
+.box-planos-wraper {
+    width: 100%;
+    -webkit-box-shadow: 10px 8px 5px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 8px 5px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 8px 5px -8px rgba(0,0,0,0.75);
+    border: 1px solid #ccc;
+    min-height: 300px;
+}
+
+.box-planos-single h2 {
+    background: #2692FF;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    font-weight: lighter;
+}
+
+.pontos-planos {
+    padding: 8px 0 15px 8px;
+}
+
+.preco {
+    margin-top: 10px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.preco h2 {
+    font-size: 24px;
+    display: inline-block;
+    border-top: 1px solid #ccc;
+    color: #777;
+    background-color: transparent;
+    padding: 0 20px;
+}
+
+
+.box-planos-single p {
+    margin-left: 20px;
+    color: #777777;
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+section.parallax {
+    width: 100%;
+    min-height: 300px;
+    background-image: url('../images/bg-paralax.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 40px 0;
+    position: relative;
+}
+
+section.parallax h2,
+section.parallax p {
+    color: white;
+}
+
+section.parallax h2 {
+    text-align: center;
+}
+
+section.parallax p  {
+    margin-top: 15px;
+}
+
+section.parallax div.center h2 > span{
+    color: #2692FF;
+    
+}
+
+section.parallax > div.center {
+    position: relative;
+    z-index: 2;
+    max-width: 960px;
+    color: white;
+}
+
+.overlay-parallax {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:rgba(20,20,20,0.6);
+}
+
+section.final-section {
+    padding: 50px 0;
+}
+
+.w50 {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+    margin: 30px 0;
+}
+
+section.final-section h2{
+    font-weight: lighter;
+    color: #777777;
+    font-size: 24px;
+} /* PAREI POR CAUSA DOS RAIOS QUE DEUS VAI MANDAR DA AQUI ALGUNS MINUTOS MINUTO Q PAREI 7:02 TENHO Q FZR AQUELA BORDER TOP PEQUENA NO H2 */
+
+section.final-section h2 > .borda-efeito {
+    width: 100px;
+    height: 2px;
+    background: #777;
+    position: absolute;
+    transform: 0.4s;
+}
+
+section.final-section h2:hover > .borda-efeito{
+    width: 100%;
+}
+
+.contato form {
+    margin-top: 15px;
+}
+
+.contato input:not([type=submit]) {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    margin-top: 10px;
+}
+
+.contato textarea {
+    font-size: 15px;
+    width: 100%;
+    height: 120px;
+    border-radius: 1px solid #ccc;
+    padding: 8px;
+    margin: 10px 0 10px 0;
+    resize: vertical;
+}
+
+.contato input[type=submit]{
+    cursor: pointer;
+    background: #2692FF;
+    color: white;
+    border: 0;
+    width: 100px;
+    height: 33px;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.equipe-single {
+    box-shadow: 10px 8px 5px -8px rgba(0,0,0,0.75);
+    padding: 10px 8px;
+    border: 1px solid #ccc;
+    min-height: 240px;
+    padding-bottom: 30px;
+}
+
+.equipe-single .topo-box-usuario {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.equipe-single .box-avatar {
+    vertical-align: middle;
+    margin-top: 10px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ccc;
+    /* Apenas aplicar background image com a imagem  que você quer*/
+}
+
+.info-usuario {
+    color: #777777;
+    padding: 8px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.time > .w50 {
+    width: 48%;
+    margin: 30px 1%;
+}
+
+.descricao-usuario-box {
+    color: #999999;
+    font-weight: lighter;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px 2%;
+    text-align: center;
+    color: white;
+    background: #444;
+}
+
+@media screen and (max-width: 768px) {
+    .w50{width: 100%;}
+    .time > .w50 {width: 100%;margin: 15px 0;}
+    .box-planos > .center {flex-wrap: wrap;}
+    .box-planos-single {width: 100%;margin-top: 30px;}
+    nav.mobile{display: block;}
+    nav.desktop{display: none;}
+}
